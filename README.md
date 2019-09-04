@@ -56,7 +56,7 @@ No obstante, las secciones están juntas, quizás demasiado lo que dificulta que
 
 ## Cosas que queremos trabajar
 
-- Mejorar la tipografía (font)
+- Elegir la tipografía
 - Elegir una paleta de colores para títulos, texto, botones, etc.
 - Aprovechar los anchos de la página y que quede claro el contenido de la página
 - Estilos para los controles: botones, inputs, etc.
