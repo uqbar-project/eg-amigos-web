@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de amigos</title>
+</head>
+
+<body>
+  <header>
+    <h2>Lista de amigos</h2>
+  </header>
+  <section>
+    <h3>Criterio de búsqueda</h3>
+    <div>
+      Cantidad de años de amistad<br>
+      <input type="number" id="aniosDesde" placeholder="desde" size="5" max="5">
+      <input type="number" id="aniosHasta" placeholder="hasta" size="5" max="5">
+    </div>
+    <div>
+      Nombre comienza con<br>
+      <input type="text" id="nombreComienzaCon" placeholder="nombre" max="25">
+    </div>
+    <div>
+      <input type="button" id="crearAmigo" value="Crear amigo">
+      <input type="button" id="buscarAmigos" value="Buscar" autofocus="true">
+    </div>
+  </section>
+  <section>
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>Apodo</th>
+        <th>Foto</th>
+        <th>Fecha amistad</th>
+        <th>Años</th>
+      </tr>
+      <tr>
+        <td>Fernando Dodino</td>
+        <td>Dodain</td>
+        <td><img src="images/dodain.jpg" height="50px;" width="50px;"></td>
+        <td>07/04/2011</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Jorge Silva</td>
+        <td>Sorje</td>
+        <td><img src="images/jorgito.png" height="50px;" width="50px;"></td>
+        <td>12/06/2010</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Leo Cesario</td>
+        <td>HH</td>
+        <td><img src="images/leo.jpg" height="50px;" width="50px;"></td>
+        <td>05/11/2006</td>
+        <td>10</td>
+      </tr>
+    </table>
+  </section>
+</body>
+
+</html>
