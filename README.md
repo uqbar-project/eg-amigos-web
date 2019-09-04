@@ -52,5 +52,5 @@ Ahora sí, seleccionamos una fuente, cuando lo hacemos nos permite copiar dos pa
 
 Cuando refrescamos la página vemos que todos los elementos de texto toman ese typeface. ¡Perfecto! solo que no vamos a elegir esa tipografía, sino alguna mejor, jeje...
 
-Te dejamos que vos elijas la que más preferís.
+Te dejamos que vos elijas la tuya.
 
