@@ -1,64 +1,56 @@
 # Taller Maquetado Web
 
-## Etapa 0
+## Etapa 1: Elegir la tipografía
 
-En esta versión recibimos nuestra página html inicial, que no tiene ningún tipo de estilo custom. Se trata de una página estática, donde solamente aplicaremos un diseño de contenido + estilos para que posteriormente le agreguemos la lógica de una aplicación.
+En esta etapa vamos a elegir una tipografía que le de identidad a nuestra aplicación. Originalmente nombramos `font` a este branch, pero en el proceso revisamos que hay diferencias entre
 
-## Estilo "por defecto" del browser
+- el **typeface**: 
+- la **fuente** (font): un tamaño o estilo específico de un _typeface_ que puede ser _regular_, _bold_, _italic_, etc.
 
-Si vemos la página `amiguis.html` directamente en el browser, notamos que ya el navegador le da un orden jerárquico a los elementos de nuestra página, aun cuando no hayamos definido ningún tipo de estilo:
+## Lo importante es el camino
 
-![page html](extra/pageHtml.png)
+Como [bien cuenta el artículo de Taimur Abdaal](https://css-tricks.com/typography-for-developers/), no es simple elegir una tipografía y en Twitter circula este meme
 
-Aquí vemos que la lista de amigos tiene un tag `<h2>` y eso implica varias definiciones:
+![tweet](extra/tweet.png)
 
-```css
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
+Es decir, seguramente elijamos un _typeface_ que a priori nos parece _cool_ (yo mismo elegí la `Comfortaa` para la wiki de Uqbar, y un mes después me arrepentí), pero en el camino aprendemos que hay tipografías con fuerte personalidad y otros que facilitan mucho más la lectura.
+
+## Dónde buscar
+
+Hay tipografías pagas y otras gratuitas, nosotros vamos a elegir las segundas. Hay varios sitios web que se pueden visitar, nosotros elegimos
+
+```html
+https://fonts.google.com/
 ```
 
-esto nos recuerda la naturaleza de HTML como un lenguaje que permite describir contenido de una página.
+que provee más de 900 fonts (se pueden buscar por diferentes categorías).
 
-También podés ver que la fuente por defecto es `Liberation Serif`, y esto **también lo decide el navegador** (hace un tiempo atrás la fuente predeterminada era Times New Roman).
+## Antes que nada
 
-## Modos de display
+Vamos a agregar una referencia a nuestro archivo de estilos custom (css) desde el HTML:
 
-En el ejemplo anterior, `h2` tiene por defecto la propiedad `display: block`, lo que significa que el título ocupa una línea entera (un bloque), aunque su tamaño en ancho y alto puede modificarse. También los `div`s tienen esta modalidad de display por defecto. Por el contrario, los textos libres suelen tener como default el `display: inline`, por lo que fluyen a través de la página sin ocupar un espacio fijo.
+```html
+<!DOCTYPE html>
+<html>
 
-Si bien hay [muchas otras configuraciones posibles para el atributo display](https://www.geeksforgeeks.org/css-display-property/), más adelante trabajaremos con `display: flex` ya que es la variante más simple y dinámica para definir un layout.
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de amigos</title>
+  <!-- agregamos el archivo apuntado -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- fin de agregado -->
+```
 
-## Responsiveness
+## Ahora sí, elegimos el archivo
 
-Si modificamos el ancho y alto del navegador, es poca la diferencia que notamos: solamente se modifican los botones de la búsqueda y los elementos que están en la tabla.
+![choosingTypeface](extra/choosingTypeface.gif)
 
-![resize browser](extra/resizeBrowser.gif)
+Ahora sí, seleccionamos una fuente, cuando lo hacemos nos permite copiar dos partes
 
-Preparar la página para los diferentes tipos de dispositivos requiere algo más de trabajo.
+- el link a la definición de la tipografía, que se incorpora en la sección `head` del HTML: si bien se descarga de un servidor web (requiere conexión a Internet), no requiere que la bajemos localmente y está alojado en servidores de alta disponibilidad y geográficamente cercanos a nuestra ubicación (CDN: Content Delivery Network), además de estar optimizado para no requerir alta necesidades de descarga.
+- nuestra primera definición: `font-family`, que vamos a aplicar a **todo el documento**, por eso le aplicamos la etiqueta `body`, que baja en cascada a todos los elementos de la página
 
-## Semántica de la página
+Cuando refrescamos la página vemos que todos los elementos de texto toman ese typeface. ¡Perfecto! solo que no vamos a elegir esa tipografía, sino alguna mejor, jeje...
 
-![content](extra/content.jpg)
+Te dejamos que vos elijas la que más preferís.
 
-Si retrocedemos y vemos la página como un cuadro, reconocemos tres o cuatro secciones principales:
-
-- el título
-- el panel de búsqueda (podríamos separar la botonera o considerar que es parte del panel)
-- la tabla de resultados
-
-No obstante, las secciones están juntas, quizás demasiado lo que dificulta que el contenido semántico de la página quede claro. Y está claro que el espacio de la página está totalmente desaprovechado.
-
-## Cosas que queremos trabajar
-
-- Mejorar la tipografía (font)
-- Elegir una paleta de colores para títulos, texto, botones, etc.
-- Aprovechar los anchos de la página y que quede claro el contenido de la página
-- Estilos para los controles: botones, inputs, etc.
-- Pensar en tarjetas más que en filas de una tabla
-- BONUS: Pensar cómo se puede ver la parte móvil
