@@ -69,3 +69,17 @@ td {
   display: flex;
   justify-content: center;
 }
+
+.tarjeta {
+  display: flex;
+  flex-direction: row;
+}
+
+.datos {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo, .subtitulo, .badge {
+  margin: 0.1rem;
+}
