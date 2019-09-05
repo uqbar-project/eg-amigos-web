@@ -13,7 +13,7 @@ http://coolors.co/
 http://paletton.com/
 ```
 
-y elegiremos algún color de nuestra preferencia.
+y elegiremos algún color de nuestra preferencia, en nuestro caso: https://colorhunt.co/palette/156039
 
 ## Colores a aplicar
 
@@ -76,3 +76,7 @@ El encabezado de la lista sí queremos que destaque respecto a cada una de las f
   background-color: #D1EECC
 }
 ```
+
+## Resultado hasta el momento
+
+![result](extra/result.gif)
