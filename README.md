@@ -60,3 +60,56 @@ Display flex nos puede ayudar a ordenar la tarjeta:
 
 - primero necesitamos que la tarjeta tenga layout horizontal
 - luego los datos deben tener un layout vertical
+
+```css
+.tarjeta {
+  display: flex;
+  flex-direction: row;
+}
+
+.datos {
+  display: flex;
+  flex-direction: column;
+}
+```
+
+Para que se vea un poco mejor le agregaremos algo de espacio, jugamos con el título, subtítulo y badge:
+
+```css
+.tarjeta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: honeydew;
+  border: 1px solid #57A99A;
+  padding: 1rem;
+  width: 15rem;
+}
+
+.datos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.titulo, .subtitulo, .badge {
+  margin: 0.1rem;
+}
+
+.subtitulo {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+.badge {
+  background-color: #57A99A;
+  color: white;
+  border-radius: 1rem;
+  width: 2rem;
+  text-align: center;
+}
+```
+
+Ya se ve mejor, ¿no?
+
+![result intermediate](extra/results2.png)

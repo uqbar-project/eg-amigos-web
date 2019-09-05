@@ -73,13 +73,38 @@ td {
 .tarjeta {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  background-color: honeydew;
+  border: 1px solid #57A99A;
+  padding: 1rem;
+  width: 15rem;
+  margin: 0.2rem;
 }
 
 .datos {
   display: flex;
   flex-direction: column;
+  margin-left: 1rem;
 }
 
 .titulo, .subtitulo, .badge {
   margin: 0.1rem;
+}
+
+.subtitulo {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+.badge {
+  background-color: #57A99A;
+  color: white;
+  border-radius: 1rem;
+  width: 2rem;
+  text-align: center;
+}
+
+.resultados {
+  display: flex;
+  flex-direction: row;
 }
