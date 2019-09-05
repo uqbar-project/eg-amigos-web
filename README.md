@@ -1,82 +1,152 @@
 # Taller Maquetado Web
 
-## Etapa 2: Seleccionar la paleta de colores
+## Etapa 3: Mejoras varias
 
-Elegir la tipografía es difícil, pero todavía hay cosas más complejas: la paleta de colores como [cuenta en este blog mi amiga Gabriela Iztueta](https://blog.10pines.com/2016/07/11/a-little-bit-of-color/), que es diseñadora gráfica. En [este artículo](https://www.invisionapp.com/inside-design/quick-guide-color-palette/) también vamos a tener varias guías para este paso.
+## Organización de los espacios de la página
 
-No tenemos la restricción de una marca o isotipo que nos fuerce a elegir determinados colores, al menos por ahora, entonces tenemos varios sitios que nos pueden ayudar a elegir una gama de colores que ayude a darle identidad a la página.
+Anteriormente dijimos que la página tenía como estructura tres partes:
 
-```html
-https://colourco.de/
-https://colorhunt.co/
-http://coolors.co/
-http://paletton.com/
-```
+- el encabezado
+- el panel de búsqueda
+- la lista de resultados
 
-y elegiremos algún color de nuestra preferencia, en nuestro caso: https://colorhunt.co/palette/156039
+Pero estas tres secciones están realmente muy juntas, a la organización espacial le falta una separación adecuada. Hay dos variantes para diferenciar ambos contenedores (panel de búsqueda y resultados por ejemplo):
 
-## Colores a aplicar
+- mediante containers agrupadores con bordes o bien con un color de fondo diferente
+- agregando márgenes o paddings como separadores
 
-### Background color
-
-El color más suave de la paleta, en nuestro caso uno en tonalidad gris y verde muuuy claro.
+Vamos a ir por la segunda variante, que logra el mismo efecto en forma más limpia y "ordenada" (lo que en el buen sentido podríamos llamar minimalista o despojado).
 
 ```css
-background-color: #D1EECC
-```
-
-### Títulos, subtítulos, encabezados
-
-Cada uno de estos títulos pueden tener diferentes colores en escala de sombras (shades), pero aquí no es tan necesario que cada título tenga diferente color, eso puede trabajarse en cada caso.
-
-```css
-```css
-h1, h2 {
-  color: black;
+section {
+  margin: 2rem;
 }
+```
 
+![](extra/paso01.png)
+
+Ahora se despega también mucho el título del container con los campos de búsqueda, entonces vamos a forzar una separación menor, trabajando con los márgenes verticales (arriba/abajo) y dejando los de la izquierda/derecha tal cual:
+
+```css
 h3 {
   color: #57A99A;
+  margin: 0.5rem 0;
 }
 ```
 
-### Botones
+Como cuenta [este artículo](https://developer.mozilla.org/es/docs/Web/CSS/margin), si ingresamos margin con dos valores, estamos asignando el valor para el margen vertical primero y el horizontal después.
 
-Es importante diferenciar las acciones (si tengo una botonera con los mismos colores, me cuesta ver a simple vista el Aceptar vs. el Cancelar). También diferenciar botones primarios y secundarios, es importante no asociarlos a colores (verde, azul, no reflejan la importancia o la semántica del botón). Cada botón tiene
+Y pedimos que el 
 
-- una parte común, definida en la class `button`
-- una parte específica, definida en la class `xxxxx-button` como `primary-button`
+Lo mismo hacemos para los divs.
+
+## Anchos
+
+A la tabla le pediremos que ocupe un ancho del 100%.
 
 ```css
-.primary-button {
-  background-color: #57A99A;
+table {
+  width: 100%;
 }
+```
 
-.secondary-button {
-  background-color: gainsboro;
+Con eso la tabla todo el ancho del contenedor y se acomoda dinámicamente.
+
+![resizeTable](extra/resizeTable.gif)
+
+## Foto
+
+Vamos a mejorar la forma en que se ve la foto, para eso, vamos a utilizar una clase foto
+
+```css
+.foto {
+  width: 50px;
+  height: auto;
+  border-radius: 1rem;
 }
+```
 
+En lugar de estirarse (y deformarse), seteamos el ancho en un tamaño fijo y luego el alto se ajusta automáticamente. También redondeamos los bordes en base al tamaño del root element.
+
+![resizePhoto](extra/resizePhoto.gif)
+
+Y al agrandar o achicar la fuente, vemos que la foto se adapta agrandándose y achicándose también.
+
+## Separando las filas suavemente
+
+Para separar cada fila, podemos aplicar estilo al borde inferior (bottom) de cada td:
+
+```css
+td {
+  border-bottom: 1px solid gainsboro;
+}
+```
+
+## Alineando la foto
+
+Para alinear la foto, crearemos una clase "centrada" asociada al TD, y conoceremos el estilo `display: flex` que simplifica bastante nuestros problemas de estilo:
+
+```css
+.centrada {
+  display: flex;
+  justify-content: center;
+}
+```
+
+Este modo de estilo es **realmente flexible** y permite una enorme variedad de combinaciones, [esta página lo explica mejor que nadie](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+
+## Mejoramos el estilo de los botones
+
+```css
 .button {
   border: none;
-}
-
-.button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 1rem;
 }
 ```
 
-Como chiche, vamos a agregar una sombra al botón cuando pasamos por arriba (hover).
+El [padding](https://developer.mozilla.org/es/docs/Web/CSS/padding) es el espacio interior que ocupa el elemento, el "relleno" entre el elemento y su borde, a diferencia del margin, que es el espacio exterior entre el borde del elemento y su container. A continuación vemos la diferencia activando las herramientas de desarrollo (F12) de tu navegador favorito:
 
-### Lista de amigos
+![marginVsPadding](extra/marginVsPadding.gif)
 
-El encabezado de la lista sí queremos que destaque respecto a cada una de las filas.
+El padding, al igual que el margin se le puede especificar
+
+- 1 parámetro: se aplica a todos los laterales (izquierdo, derecho, superior e inferior)
+- 2 parámetros: el primero es el vertical y el segundo el horizontal
+- 4 parámetros: siguiendo las agujas del reloj, pensando en las horas 0 3 6 y 9, es decir: arriba, derecha, abajo e izquierda, respectivamente
+
+## Inputs
+
+Aplicamos un estilo adicional a los inputs:
 
 ```css
-.header {
-  background-color: #D1EECC
+input {
+  font-family: 'Nunito', sans-serif;
+  /*                */
+  font-size: 1rem;
+  padding: 0.2rem;
+  /*                */
 }
 ```
 
-## Resultado hasta el momento
+El padding para agrandar tanto el ancho como el alto, y agrandamos el font-size que el navegador lo achica por su cuenta, para que tenga el mismo tamaño que las etiquetas que tiene arriba. El color del placeholder (la explicación de lo que debe escribir el usuario) está en gris por defecto, no cambiamos esa opción.
 
-![result](extra/result.gif)
+## Un último detalle
+
+El título de la lista de amigos no nos quedó con el mismo margen, lo ajustamos:
+
+```css
+body {
+  ...
+  margin: 2rem;
+  ...
+}
+```
+
+y eliminamos la definición de css que habíamos escrito para `section`.
+
+## Resultado actual
+
+![resultado](extra/result.png)
+
+Nada mal para un par de iteraciones.

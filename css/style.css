@@ -1,12 +1,15 @@
 body {
   font-family: 'Nunito', sans-serif;
   font-size: 100%;
+  margin: 2rem;
 
   background-color: #ECF4F3;
 }
 
 input {
   font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  padding: 0.2rem;
 }
 
 h1, h2 {
@@ -15,10 +18,11 @@ h1, h2 {
 
 h3 {
   color: #57A99A;
+  margin: 0.5rem 0;
 }
 
 .header {
-  background-color: #D1EECC
+  background-color: #D1EECC;
 }
 
 .primary-button {
@@ -31,8 +35,33 @@ h3 {
 
 .button {
   border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 1rem;
 }
 
 .button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+div {
+  margin: 0.5rem 0;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  border-bottom: 1px solid gainsboro;
+}
+
+.foto {
+  width: 50px;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.centrada {
+  display: flex;
+  justify-content: center;
 }
