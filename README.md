@@ -143,7 +143,13 @@ body {
 }
 ```
 
-y eliminamos la definición de css que habíamos escrito para `section`.
+y cambiamos la definición de css que habíamos escrito para `section` para que solo modifique el margen inferior.
+
+```css
+section {
+  margin-bottom: 2rem;
+}
+```
 
 ## Resultado actual
 
