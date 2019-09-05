@@ -60,7 +60,7 @@ Ajustaremos el tamaño de la fuente para que por defecto sea un poco más grande
 
 ```css
 body {
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Nunito', sans-serif;
   /*                   */
   font-size: 100%;     /* 16px */
   /*                   */
@@ -83,7 +83,7 @@ Esto lo resolvemos en nuestro archivo `style.css`:
 
 ```css
 body {
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 100%;
   /*                   */
   line-height: 1.5;
@@ -92,3 +92,15 @@ body {
 ```
 
 Esto permite espaciar un poco el texto de nuestro formulario, aunque todavía no se ven grandes cambios.
+
+## Font family en los inputs
+
+El user agent (Chrome en nuestro caso) pisa algunos atributos que podrían ser heredados en cascada. Por eso, para los inputs debemos forzar el typeface manualmente incorporando otra definición específica para este tipo de tags:
+
+```css
+input {
+  font-family: 'Nunito', sans-serif;
+}
+```
+
+![settingTypefaceInput](extra/settingTypefaceToInput.gif)

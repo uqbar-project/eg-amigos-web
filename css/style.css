@@ -1,5 +1,9 @@
 body {
-  font-family: Assistant, sans-serif;
+  font-family: Nunito, sans-serif;
   font-size: 100%;
   line-height: 1.5;
+}
+
+input {
+  font-family: 'Nunito', sans-serif;
 }
