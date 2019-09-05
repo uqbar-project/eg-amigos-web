@@ -54,3 +54,41 @@ Cuando refrescamos la página vemos que todos los elementos de texto toman ese t
 
 Te dejamos que vos elijas la tuya.
 
+## Tamaño de la fuente
+
+Ajustaremos el tamaño de la fuente para que por defecto sea un poco más grande, eso lo hacemos tratando de utilizar medidas relativas (em, rem) antes que absolutas (px que son píxeles).
+
+```css
+body {
+  font-family: 'Assistant', sans-serif;
+  /*                   */
+  font-size: 100%;     /* 16px */
+  /*                   */
+}
+```
+
+Esto significa que el tamaño del cual comenzamos es de 100% (el equivalente a 16px), y los hijos de body que utilicen `rem` considerarán este valor como base (el _root font size_, si definen un font-size de 1.5rem será 24px, por este motivo muchos diseñadores eligen partir de un font-size de 62.5% que es 10px y por ende facilita más los cálculos de tamaño).
+
+En [este artículo](https://cybmeta.com/em-y-rem) se explica con más profundidad las medidas relativas que aplican desde el body hacia los elementos hijos.
+
+## Espacio entre líneas
+
+Queremos que el color del texto mantenga el negro, entonces [siguiendo los consejos de nuestros amigos](https://css-tricks.com/typography-for-developers/)
+
+- Increase line-height for thick fonts
+- Increase line-height when fonts are a dark color  <== coincide
+- Increase line-height for long-form content        <== coincide
+
+Esto lo resolvemos en nuestro archivo `style.css`:
+
+```css
+body {
+  font-family: 'Assistant', sans-serif;
+  font-size: 100%;
+  /*                   */
+  line-height: 1.5;
+  /*                   */
+}
+```
+
+Esto permite espaciar un poco el texto de nuestro formulario, aunque todavía no se ven grandes cambios.
