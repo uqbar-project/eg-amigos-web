@@ -1,5 +1,33 @@
 body {
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.2rem;
-  line-height: 1.5;
+
+  background-color: #ECF4F3;
+}
+
+input {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2 {
+  color: black;
+}
+
+h3 {
+  color: #57A99A;
+}
+
+.header {
+  background-color: #D1EECC
+}
+
+.primary-button {
+  background-color: #57A99A;
+  border-color: gainsboro;
+  border: 0;
+}
+
+.secondary-button {
+  background-color: gainsboro;
+  border-color: gainsboro;
 }
