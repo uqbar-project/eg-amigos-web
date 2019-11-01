@@ -45,7 +45,7 @@ Vamos a agregar una referencia a nuestro archivo de estilos custom (css) desde e
 
 ![choosingTypeface](extra/choosingTypeface.gif)
 
-Ahora sí, seleccionamos una fuente, cuando lo hacemos nos permite copiar dos partes
+Cuando seleccionamos una fuente nos permite copiar dos partes
 
 - el link a la definición de la tipografía, que se incorpora en la sección `head` del HTML: si bien se descarga de un servidor web (requiere conexión a Internet), no requiere que la bajemos localmente y está alojado en servidores de alta disponibilidad y geográficamente cercanos a nuestra ubicación (CDN: Content Delivery Network), además de estar optimizado para no requerir alta necesidades de descarga.
 - nuestra primera definición: `font-family`, que vamos a aplicar a **todo el documento**, por eso le aplicamos la etiqueta `body`, que baja en cascada a todos los elementos de la página
@@ -73,13 +73,13 @@ En [este artículo](https://cybmeta.com/em-y-rem) se explica con más profundida
 
 ## Espacio entre líneas
 
-Queremos que el color del texto mantenga el negro, entonces [siguiendo los consejos de nuestros amigos](https://css-tricks.com/typography-for-developers/)
+Asumiendo que el color de los títulos seguirá siendo negro (aunque eso lo veremos una interación más adelante) y [siguiendo los consejos de nuestros amigos](https://css-tricks.com/typography-for-developers/)
 
 - Increase line-height for thick fonts
 - Increase line-height when fonts are a dark color  <== coincide
 - Increase line-height for long-form content        <== coincide
 
-Esto lo resolvemos en nuestro archivo `style.css`:
+Aplicamos esos cambios en nuestro archivo `style.css`:
 
 ```css
 body {
