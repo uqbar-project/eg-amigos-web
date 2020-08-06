@@ -4,7 +4,7 @@
 
 En esta etapa vamos a elegir una tipografía que le de identidad a nuestra aplicación. Originalmente nombramos `font` a este branch, pero en el proceso revisamos que hay diferencias entre
 
-- el **typeface**: 
+- el **typeface**: Arial, Courier New, etc.
 - la **fuente** (font): un tamaño o estilo específico de un _typeface_ que puede ser _regular_, _bold_, _italic_, etc.
 
 ## Lo importante es el camino
@@ -43,7 +43,7 @@ Vamos a agregar una referencia a nuestro archivo de estilos custom (css) desde e
 
 ## Ahora sí, elegimos el archivo
 
-![choosingTypeface](extra/choosingTypeface.gif)
+![choosingTypeface](extra/selectingTypeface.gif)
 
 Cuando seleccionamos una fuente nos permite copiar dos partes
 
@@ -67,9 +67,7 @@ body {
 }
 ```
 
-Esto significa que el tamaño del cual comenzamos es de 100% (el equivalente a 16px), y los hijos de body que utilicen `rem` considerarán este valor como base (el _root font size_, si definen un font-size de 1.5rem será 24px, por este motivo muchos diseñadores eligen partir de un font-size de 62.5% que es 10px y por ende facilita más los cálculos de tamaño).
-
-En [este artículo](https://cybmeta.com/em-y-rem) se explica con más profundidad las medidas relativas que aplican desde el body hacia los elementos hijos.
+Esto significa que el tamaño del cual comenzamos es de 100% (el equivalente a 16px), y los hijos de body que utilicen `rem` considerarán este valor como base (el _root font size_, si definen un font-size de 1.5rem será 24px, por este motivo muchos diseñadores eligen partir de un font-size de 62.5% que es 10px y por ende facilita más los cálculos de tamaño). Más adelante hablaremos más en profundidad, si te interesa podés ver [este ejemplo](https://github.com/uqbar-project/css-04-medidas-espaciales).
 
 ## Espacio entre líneas
 
