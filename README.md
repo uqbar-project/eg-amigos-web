@@ -36,7 +36,7 @@ Si bien hay [muchas otras configuraciones posibles para el atributo display](htt
 
 ## Responsiveness
 
-Si modificamos el ancho y alto del navegador, es poca la diferencia que notamos: solamente se modifican los botones de la búsqueda y los elementos que están en la tabla.
+Si modificamos el ancho y alto del navegador, es poca la diferencia que notamos: solamente se acomoda el layout de los botones de la búsqueda (uno abajo del otro) y los elementos que están en la tabla.
 
 ![resize browser](extra/resizeBrowser.gif)
 
@@ -46,7 +46,7 @@ Preparar la página para los diferentes tipos de dispositivos requiere algo más
 
 ![content](extra/content.jpg)
 
-Si retrocedemos y vemos la página como un cuadro, reconocemos tres o cuatro secciones principales:
+Si intentamos ver la página como un cuadro, reconoceremos tres o cuatro secciones principales:
 
 - el título
 - el panel de búsqueda (podríamos separar la botonera o considerar que es parte del panel)
