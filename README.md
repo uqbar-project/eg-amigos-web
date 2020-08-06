@@ -156,3 +156,7 @@ section {
 ![resultado](extra/result.png)
 
 Nada mal para un par de iteraciones.
+
+## Siguiente paso
+
+- [Refactorizando el css](https://github.com/uqbar-project/eg-amigos-web/tree/taller-04)
