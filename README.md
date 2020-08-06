@@ -27,9 +27,8 @@ background-color: #D1EECC
 
 ### Títulos, subtítulos, encabezados
 
-Cada uno de estos títulos pueden tener diferentes colores en escala de sombras (shades), pero aquí no es tan necesario que cada título tenga diferente color, eso puede trabajarse en cada caso.
+Cada uno de estos títulos pueden tener diferentes colores en escala de sombras (shades), en este caso no nos parece necesario que cada título tenga diferente color, así que dejaremos los títulos principal y secundario en negro y solo cambiaremos el título 3.
 
-```css
 ```css
 h1, h2 {
   color: black;
