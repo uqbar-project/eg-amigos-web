@@ -56,9 +56,8 @@ No obstante, las secciones están juntas, quizás demasiado lo que dificulta que
 
 ## Cosas que queremos trabajar
 
-- Elegir la tipografía
-- Elegir una paleta de colores para títulos, texto, botones, etc.
-- Aprovechar los anchos de la página y que quede claro el contenido de la página
-- Estilos para los controles: botones, inputs, etc.
-- Pensar en tarjetas más que en filas de una tabla
-- BONUS: Pensar cómo se puede ver la parte móvil
+- [Elegir la tipografía](https://github.com/uqbar-project/eg-amigos-web/tree/taller-01)
+- [Elegir una paleta de colores para títulos, texto, botones, etc.](https://github.com/uqbar-project/eg-amigos-web/tree/taller-02)
+- [Aprovechar los anchos de la página y que quede claro el contenido de la página](https://github.com/uqbar-project/eg-amigos-web/tree/taller-03)
+- [Estilos para los controles: botones, inputs, etc.](https://github.com/uqbar-project/eg-amigos-web/tree/taller-03)
+- [Pensar en tarjetas más que en filas de una tabla](https://github.com/uqbar-project/eg-amigos-web/tree/taller-04)
