@@ -41,11 +41,11 @@ Vamos a agregar una referencia a nuestro archivo de estilos custom (css) desde e
   <!-- fin de agregado -->
 ```
 
-## Ahora sí, elegimos el archivo
+## Ahora sí, elegimos el typeface
 
 ![choosingTypeface](extra/selectingTypeface.gif)
 
-Cuando seleccionamos una fuente nos permite copiar dos partes
+La solapa `Embed` nos permite copiar dos partes
 
 - el link a la definición de la tipografía, que se incorpora en la sección `head` del HTML: si bien se descarga de un servidor web (requiere conexión a Internet), no requiere que la bajemos localmente y está alojado en servidores de alta disponibilidad y geográficamente cercanos a nuestra ubicación (CDN: Content Delivery Network), además de estar optimizado para no requerir alta necesidades de descarga.
 - nuestra primera definición: `font-family`, que vamos a aplicar a **todo el documento**, por eso le aplicamos la etiqueta `body`, que baja en cascada a todos los elementos de la página
