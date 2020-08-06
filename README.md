@@ -79,3 +79,7 @@ El encabezado de la lista sí queremos que destaque respecto a cada una de las f
 ## Resultado hasta el momento
 
 ![result](extra/result.gif)
+
+## Siguiente paso
+
+- Definiremos el [manejo espacial](https://github.com/uqbar-project/eg-amigos-web/tree/taller-03)
