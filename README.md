@@ -102,3 +102,7 @@ input {
 ```
 
 ![settingTypefaceInput](extra/settingTypefaceToInput.gif)
+
+## Siguiente paso
+
+- Definiremos [la paleta de colores](https://github.com/uqbar-project/eg-amigos-web/tree/taller-02)
